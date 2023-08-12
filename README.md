@@ -16,4 +16,4 @@
 
 **Git Pages**
 
-* [Ссылка на страницу в Git Pages](ССЫЛКА)
+* [Ссылка на страницу в Git Pages](https://github.com/KristinaShvedova/ono-tebe-nado.git)
