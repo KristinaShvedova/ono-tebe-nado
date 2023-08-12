@@ -1,7 +1,7 @@
-/* место для вашего кода */
+/*границы 
 * {
     outline: 1px solid red;
-}
+}*/
 
 .header {
     position: relative;
@@ -49,7 +49,7 @@
     font-weight: 400;
     line-height: 24.3px;
 }
-.logo {
+.logo-black {
     width: 148px;
     height: 105px;
     padding: 0px 355px 4px 209px;
@@ -93,14 +93,13 @@
     padding: 0px 984px 0px 0px;
     max-width: 1340px;
     z-index: 2;
-
-font-family: Raleway;
-font-size: 100px;
-font-style: normal;
-font-weight: 700;
-line-height: 100%;
-letter-spacing: 30px;
-text-transform: uppercase;
+    font-family: Raleway;
+    font-size: 100px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: 30px;
+    text-transform: uppercase;
 }
 .title-second {
     position: absolute;
@@ -109,14 +108,13 @@ text-transform: uppercase;
     /*text-align: center не работает поэтому через паддинги центрирую*/
     padding: 0px 461px 0px 461px;
     z-index: 2;
-
-font-family: Raleway;
-font-size: 100px;
-font-style: normal;
-font-weight: 700;
-line-height: 100%;
-letter-spacing: 30px;
-text-transform: uppercase;
+    font-family: Raleway;
+    font-size: 100px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: 30px;
+    text-transform: uppercase;
 }
 .title-third {
     position: absolute;
@@ -124,27 +122,25 @@ text-transform: uppercase;
     /*text-align не работает поэтому через паддинги центрирую*/
     padding: 0px 0px 0px 893px;
     z-index: 2;
-    
-font-family: Raleway;
-font-size: 100px;
-font-style: normal;
-font-weight: 700;
-line-height: 100%;
-letter-spacing: 30px;
-text-transform: uppercase;
+    font-family: Raleway;
+    font-size: 100px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: 30px;
+    text-transform: uppercase;
 }
 
 .subtitle {
     /*из-за позиции абсолютной во всем тексте торчат лишние пиксели сбоку*/
     position: absolute;
     margin: 667px 385px 62px 422px;
-
-font-family: Raleway;
-font-size: 22px;
-font-style: normal;
-font-weight: 400;
-line-height: 28px; /* 127.273% */
-text-transform: uppercase;
+    font-family: Raleway;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    text-transform: uppercase;
 }
 
 .paragraph {
@@ -154,11 +150,259 @@ text-transform: uppercase;
     border: 1px solid white;
     /*текст в одну строку*/
     white-space: nowrap;
+    font-family: Raleway;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+}
 
-font-family: Raleway;
-font-size: 22px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-text-transform: uppercase;
+.lots {
+    position: relative;
+    margin: 180px 50px 132px 50px;
+}
+
+.title {
+    /* position: absolute; */
+    margin: 0px;
+    padding: 0px 1179px 0px 40px;
+    font-family: Raleway;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.cards {
+    /*прилип к title*/
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px;
+    margin: 27px 0px 30px;
+}
+
+.card-one {
+    max-width: 430px;
+    min-height: 450px;
+    margin: 0px;
+    background-image: url('../images/card-lot-01.jpg');
+    /*благодаря cover картинка вполностью влезает*/
+    background-size: cover;
+    background-position: center;
+    color: white;
+    /*задали чтоб затемнение не перекрывало текст
+    z-index: 1;*/
+}
+
+.card-two {
+    max-width: 430px;
+    min-height: 450px;
+    margin: 0px;
+    background-image: url('../images/card-lot-02.jpg');
+    /*благодаря cover картинка вполностью влезает*/
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.card-three {
+    max-width: 430px;
+    min-height: 450px;
+    margin: 0px;
+    background-image: url('../images/card-lot-03.jpg');
+    /*благодаря cover картинка вполностью влезает*/
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+/*затемнение*/
+/*только на 3ий элемент, т.к он перекрывает все предыдущие карточки и даже отступы*/
+.card-three:before {
+    content: "";
+    position: absolute;
+    /*чтоб на всю секцию растянулся*/
+    padding: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px; 
+    /*прозрачность*/
+    opacity: 0.6;
+    /*длительность*/
+    transition: 0.5s;
+    background-color: #000000;
+}
+
+.text {
+    /*д*/
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 0px;
+    position: relative;
+    z-index: 1;
+}
+
+.text-title {
+    margin: auto;
+    padding: 50px 40px 0px;
+    color: #FFF;
+    font-family: Raleway;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    text-decoration-line: underline;
+    text-transform: uppercase;
+}
+
+.text-subtitle {
+    /*маржин сдвинул текст вниз но все равно не до конца
+    margin-bottom: auto; */
+    margin: 0px;
+    padding: 0px 40px 50px 40px;
+    color: #FFF;
+    font-family: Raleway;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+}
+
+.info {
+    margin: 0px;
+
+    font-family: Raleway;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.about {
+    margin: 182px 50px 180px;
+    position: relative;
+
+}
+
+.column {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+.about-column {
+    display: flex;
+    flex-direction: row;
+    margin: 0px;
+    max-width: 430px;
+    height: 240px;
+}
+
+.circle {
+    width: 240px;
+    height: 240px;
+    margin: 0px 95px;
+    border: 1px solid black;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+}
+
+.logo {
+    max-width: 148px;
+    min-height: 114px;
+    background-color: #000000;
+}
+
+.text-column {
+    position: relative;
+    margin: 0px 0px 0px 25px;
+    max-width: 855px;
+}
+
+.about-title { 
+    margin: 0px;
+    padding: 100px 594px 0px 25px;
+}
+
+.about-text {
+    margin: 0px;
+    padding: 100px 0px 0px;
+    font-family: Raleway;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.about-text:last-of-type {
+    padding-top: 25px;
+}
+
+.footer {
+    position: relative;
+    margin: 0px 50px 90px;
+}
+
+.footer-data {
+    /*общий флекс*/
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+.footer-contacts {
+    list-style: none;
+    /*240пх должно быть но не влезает тогда socials*/
+    max-width: 215px;
+    margin: 0px;
+    padding: 0px;
+    font-family: Raleway;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24.3px;
+}
+
+.footer-information {
+    list-style: none;
+    max-width: 149px;
+    margin: 0px;
+    padding: 0px 355px;
+    text-align: center;
+    font-family: Raleway;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.footer-info {
+    text-decoration: underline;
+}
+
+.footer-info:first-of-type {
+    text-decoration: none;
+}
+
+.socials {
+    margin: 0px;
+} 
+
+.icon {
+    max-width: 48px;
+    min-height: 48px;
+    padding-right: 48px;
+}
+
+.icon:last-of-type {
+    padding-right: 0px;
 }
