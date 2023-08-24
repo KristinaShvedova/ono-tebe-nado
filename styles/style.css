@@ -1,7 +1,13 @@
-/*границы 
+/*границы*/
 * {
     outline: 1px solid red;
-}*/
+}
+
+/*у всех ссылок убрали подчеркивание нижнее*/
+a {
+    text-decoration: none;
+}
+
 
 .header {
     position: relative;
@@ -18,18 +24,28 @@
     padding: 43px 0px;
     margin: 0px;
     max-width: 388px;
-    list-style-type: circle;
-    font-family: Raleway;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
 }
+
+a:link {
+    /*ссылки не горят синим*/
+    color: black;
+    cursor: pointer;
+}
+
 .menu-point {
     padding: 0px 32px 0px 0px;
+    list-style-type: circle;
+    /*либо все ссылки подчеркнуты либо никакая*/
+    text-decoration: underline;
 }
 .menu-point:first-of-type {
     list-style: none;
+    /*не убирается нижнее подчеркивание*/
+    text-decoration: none;
 }
 .menu-point:last-of-type {
     padding: 0px;
@@ -43,7 +59,6 @@
     margin: 0px;
     padding: 5px 0px 7px 0px;
     max-width: 240px;
-    font-family: Raleway;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -53,10 +68,16 @@
     width: 148px;
     height: 105px;
     padding: 0px 355px 4px 209px;
+    color: black;
 }
 
 .overlay {
     background-image: url('../images/cover.jpg');
+    /*чтоб элементы блока с позицией абсолют не вышли за рамки блока*/
+    /*благодаря позиционированию затемнеие наложилось только на overlay + сработал z-index*/
+    position: relative;
+    display: flex;
+    flex-direction: column;
     width: 100%;
     min-height: 757px;
     /*благодаря cover картинка вполностью влезает*/
@@ -65,12 +86,10 @@
     color: white;
     /*задали чтоб затемнение не перекрывало текст*/
     z-index: 1;
-    /*благодаря позиционированию затемнеие наложилось только на overlay + сработал z-index*/
-    position: relative;
 }
 
 /*затемнение*/
-.overlay:before {
+.overlay::before {
     content: "";
     position: absolute;
     /*чтоб на всю секцию растянулся*/
@@ -80,20 +99,16 @@
     left: 0px;
     /*прозрачность*/
     opacity: 0.6;
-    /*длительность*/
-    transition: 0.5s;
     background-color: black;
 }
 
 .title-first {
-    position: absolute;
-    text-align:left;
+    position: relative;
+    text-align: left;
+    padding: 0px;
     margin: 165px 50px 20px 50px;
-    /*паддинги от себя добавили*/
-    padding: 0px 984px 0px 0px;
     max-width: 1340px;
     z-index: 2;
-    font-family: Raleway;
     font-size: 100px;
     font-style: normal;
     font-weight: 700;
@@ -102,13 +117,11 @@
     text-transform: uppercase;
 }
 .title-second {
-    position: absolute;
-    /*от начала блока отступ верхний*/
-    margin: 300px 50px 20px 50px;
-    /*text-align: center не работает поэтому через паддинги центрирую*/
-    padding: 0px 461px 0px 461px;
+    position: relative;
+    text-align: center;
+    padding: 0px;
+    margin: 0px 110px 20px 50px;
     z-index: 2;
-    font-family: Raleway;
     font-size: 100px;
     font-style: normal;
     font-weight: 700;
@@ -117,12 +130,11 @@
     text-transform: uppercase;
 }
 .title-third {
-    position: absolute;
-    margin: 420px 50px 147px 50px;
-    /*text-align не работает поэтому через паддинги центрирую*/
-    padding: 0px 0px 0px 893px;
+    position: relative;
+    text-align: right;
+    margin: 0px 50px;
+    padding: 0px;
     z-index: 2;
-    font-family: Raleway;
     font-size: 100px;
     font-style: normal;
     font-weight: 700;
@@ -132,27 +144,31 @@
 }
 
 .subtitle {
-    /*из-за позиции абсолютной во всем тексте торчат лишние пиксели сбоку*/
-    position: absolute;
-    margin: 667px 385px 62px 422px;
-    font-family: Raleway;
+    position: relative;
+    margin: 147px 385px 0px 422px;
+    max-width: 633px;
     font-size: 22px;
     font-style: normal;
+    /*тоньше должен быть*/
     font-weight: 400;
     line-height: 28px;
     text-transform: uppercase;
 }
 
-.paragraph {
-    position: absolute;
-    margin: 655px 50px 50px 1133px;
+/* кнопка встала под сабтитл а не в ряд с ним*/
+.button {
+    position: relative;
+    margin: 0px 50px 50px 1133px;
     padding: 12px 32px 12px 32px;
     border: 1px solid white;
+    /*прозрачный фон*/
+    background-color: transparent;
+    color: white;
     /*текст в одну строку*/
     white-space: nowrap;
-    font-family: Raleway;
     font-size: 22px;
     font-style: normal;
+    /*тоньше должен быть*/
     font-weight: 400;
     line-height: normal;
     text-transform: uppercase;
@@ -167,7 +183,6 @@
     /* position: absolute; */
     margin: 0px;
     padding: 0px 1179px 0px 40px;
-    font-family: Raleway;
     font-size: 40px;
     font-style: normal;
     font-weight: 700;
@@ -252,7 +267,6 @@
     margin: auto;
     padding: 50px 40px 0px;
     color: #FFF;
-    font-family: Raleway;
     font-size: 22px;
     font-style: normal;
     font-weight: 700;
@@ -267,7 +281,6 @@
     margin: 0px;
     padding: 0px 40px 50px 40px;
     color: #FFF;
-    font-family: Raleway;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
@@ -276,8 +289,6 @@
 
 .info {
     margin: 0px;
-
-    font-family: Raleway;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
@@ -336,7 +347,6 @@
 .about-text {
     margin: 0px;
     padding: 100px 0px 0px;
-    font-family: Raleway;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
@@ -365,7 +375,6 @@
     max-width: 215px;
     margin: 0px;
     padding: 0px;
-    font-family: Raleway;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -378,7 +387,6 @@
     margin: 0px;
     padding: 0px 355px;
     text-align: center;
-    font-family: Raleway;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
