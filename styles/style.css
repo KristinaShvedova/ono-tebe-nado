@@ -200,44 +200,33 @@ a:link {
     margin: 27px 0px 30px;
 }
 
-.card-one {
+.card {
     max-width: 430px;
     min-height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     margin: 0px;
-    background-image: url('../images/card-lot-01.jpg');
     /*благодаря cover картинка вполностью влезает*/
     background-size: cover;
     background-position: center;
     color: white;
-    /*задали чтоб затемнение не перекрывало текст
-    z-index: 1;*/
+}
+
+.card-one {
+    background-image: url('../images/card-lot-01.jpg');
 }
 
 .card-two {
-    max-width: 430px;
-    min-height: 450px;
-    margin: 0px;
     background-image: url('../images/card-lot-02.jpg');
-    /*благодаря cover картинка вполностью влезает*/
-    background-size: cover;
-    background-position: center;
-    color: white;
 }
 
 .card-three {
-    max-width: 430px;
-    min-height: 450px;
-    margin: 0px;
     background-image: url('../images/card-lot-03.jpg');
-    /*благодаря cover картинка вполностью влезает*/
-    background-size: cover;
-    background-position: center;
-    color: white;
 }
 
 /*затемнение*/
-/*только на 3ий элемент, т.к он перекрывает все предыдущие карточки и даже отступы*/
-.card-three:before {
+.card::before {
     content: "";
     position: absolute;
     /*чтоб на всю секцию растянулся*/
@@ -247,24 +236,12 @@ a:link {
     bottom: 0px;
     left: 0px; 
     /*прозрачность*/
-    opacity: 0.6;
-    /*длительность*/
-    transition: 0.5s;
+    opacity: 0.25;
     background-color: #000000;
 }
 
-.text {
-    /*д*/
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    margin: 0px;
-    position: relative;
-    z-index: 1;
-}
-
 .text-title {
-    margin: auto;
+    margin: 0;
     padding: 50px 40px 0px;
     color: #FFF;
     font-size: 22px;
@@ -273,11 +250,10 @@ a:link {
     line-height: 120%;
     text-decoration-line: underline;
     text-transform: uppercase;
+    z-index: 1;
 }
 
 .text-subtitle {
-    /*маржин сдвинул текст вниз но все равно не до конца
-    margin-bottom: auto; */
     margin: 0px;
     padding: 0px 40px 50px 40px;
     color: #FFF;
@@ -285,6 +261,7 @@ a:link {
     font-style: normal;
     font-weight: 400;
     line-height: 120%;
+    z-index: 1;
 }
 
 .info {
@@ -319,8 +296,7 @@ a:link {
     width: 240px;
     height: 240px;
     margin: 0px 95px;
-    border: 1px solid black;
-    border-radius: 100%;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -337,6 +313,7 @@ a:link {
     position: relative;
     margin: 0px 0px 0px 25px;
     max-width: 855px;
+
 }
 
 .about-title { 
@@ -370,15 +347,9 @@ a:link {
 }
 
 .footer-contacts {
-    list-style: none;
     /*240пх должно быть но не влезает тогда socials*/
     max-width: 215px;
-    margin: 0px;
     padding: 0px;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24.3px;
 }
 
 .footer-information {
@@ -392,7 +363,7 @@ a:link {
     font-weight: 400;
     line-height: normal;
 }
-
+/*подчеркнуть нужно ссылки*/
 .footer-info {
     text-decoration: underline;
 }
@@ -403,12 +374,14 @@ a:link {
 
 .socials {
     margin: 0px;
+    display: flex;
+    /*вместо правых отступов*/
+    gap: 48px;
 } 
-
+/*к правому краю прибить нужно соц сети*/
 .icon {
     max-width: 48px;
     min-height: 48px;
-    padding-right: 48px;
 }
 
 .icon:last-of-type {
