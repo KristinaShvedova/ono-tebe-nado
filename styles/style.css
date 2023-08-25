@@ -1,7 +1,7 @@
-/*границы*/
+/*границы
 * {
     outline: 1px solid red;
-}
+} */
 
 /*у всех ссылок убрали подчеркивание нижнее*/
 a {
@@ -19,6 +19,8 @@ a {
     position: relative;
     display: flex;
     flex-direction: row;
+    /*чтоб лого стоял +- по середине и не было скролла*/
+    justify-content: space-between;
     color: black;
     margin: 92px 50px;
 }
@@ -70,11 +72,19 @@ a:link {
     font-weight: 400;
     line-height: 24.3px;
 }
+.contacts-point {
+    /*подчеркнули ссылки*/
+    text-decoration: underline;
+}
+.contacts-place {
+    /*убрали подчеркивание у последней*/
+    text-decoration: none;
+}
 .logo-black {
     width: 148px;
     height: 105px;
-    padding: 0px 355px 4px 209px;
-    color: black;
+    /*чтоб лого стоял +- по середине и не было скролла маржины поменяли на justify в header*/
+    /*margin: 0px 355px 4px 209px;*/
 }
 
 .overlay {
