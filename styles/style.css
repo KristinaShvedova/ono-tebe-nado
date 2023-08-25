@@ -331,27 +331,29 @@ a:link {
 
 .text-column {
     position: relative;
+    /*чтоб не было скролла*/
     margin: 0px 0px 0px 25px;
-    max-width: 855px;
+    max-width: 885px;
+    min-width: 400px;
 
 }
 
-.about-title { 
-    margin: 0px;
-    padding: 100px 594px 0px 25px;
+.about-title {
+    /*чтоб не было скролла right отступ убрали*/
+    margin: 100px auto 100px 0px;
 }
 
 .about-text {
-    margin: 0px;
-    padding: 100px 0px 0px;
+    margin: auto;
+    padding: 25px 0px 0px;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
 }
 
-.about-text:last-of-type {
-    padding-top: 25px;
+.about-text:first-of-type {
+    padding-top: 0px;
 }
 
 .footer {
