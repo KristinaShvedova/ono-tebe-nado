@@ -87,7 +87,7 @@ a:link {
     /*margin: 0px 355px 4px 209px;*/
 }
 
-.overlay {
+.flowers {
     background-image: url('../images/cover.jpg');
     /*чтоб элементы блока с позицией абсолют не вышли за рамки блока*/
     /*благодаря позиционированию затемнеие наложилось только на overlay + сработал z-index*/
@@ -103,9 +103,8 @@ a:link {
     /*задали чтоб затемнение не перекрывало текст*/
     z-index: 1;
 }
-
 /*затемнение*/
-.overlay::before {
+.flowers::before {
     content: "";
     position: absolute;
     /*чтоб на всю секцию растянулся*/
@@ -117,7 +116,6 @@ a:link {
     opacity: 0.6;
     background-color: black;
 }
-
 .title-first {
     position: relative;
     text-align: left;
@@ -179,7 +177,6 @@ a:link {
     line-height: 28px;
     text-transform: uppercase;
 }
-
 .button {
     position: relative;
     text-align: center;
@@ -205,9 +202,8 @@ a:link {
 }
 
 .title {
-    /* position: absolute; */
-    margin: 0px;
-    padding: 0px 1179px 0px 40px;
+    /*чтоб не было скролла правый отступ auto*/
+    margin: 0px auto 0px 40px;
     font-size: 40px;
     font-style: normal;
     font-weight: 700;
@@ -222,10 +218,12 @@ a:link {
     flex-direction: row;
     justify-content: space-between;
     padding: 0px;
-    margin: 27px 0px 30px;
+    margin: 27px auto 30px;
 }
 
 .card {
+    /*без относительной позиции затемнение наслаивается*/
+    position: relative;
     max-width: 430px;
     min-height: 450px;
     display: flex;
@@ -250,19 +248,15 @@ a:link {
     background-image: url('../images/card-lot-03.jpg');
 }
 
-/*затемнение*/
-.card::before {
-    content: "";
+.overlay {
+    /*каждой карточке поставили доп элемент*/
     position: absolute;
-    /*чтоб на всю секцию растянулся*/
-    padding: 0px;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px; 
-    /*прозрачность*/
-    opacity: 0.25;
-    background-color: #000000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    background-color: #000;
 }
 
 .text-title {
@@ -295,6 +289,7 @@ a:link {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    text-decoration: underline;
 }
 
 .about {
