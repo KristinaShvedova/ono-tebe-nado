@@ -165,6 +165,7 @@
     .button {
       position: relative;
       text-align: center;
+      font-family: "Raleway", sans-serif;
       margin: 135px 50px 50px 78px;
       padding: 12px 32px 12px 32px;
       border: 1px solid white;
