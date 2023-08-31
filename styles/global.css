@@ -27,6 +27,8 @@ blockquote {
 
 a {
   color: inherit;
+  /*у всех ссылок убрали подчеркивание нижнее*/
+  text-decoration: none;
 }
 
 img {
