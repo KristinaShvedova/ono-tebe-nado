@@ -1,7 +1,7 @@
-/*границы
+/*границы */
 * {
     outline: 1px solid red;
-} */
+}
 .page {
     max-width: 1440px;
     margin: 0 auto;
@@ -101,45 +101,38 @@
       opacity: 0.6;
       background-color: black;
     }
-    .title-first {
-      position: relative;
+    .title { 
+        margin: 165px 50px 0px;
+        /*в несколько строк текст*/
+        white-space: break-spaces;
+        /*хорошо стоят заголовки*/
+        display: flex;
+        flex-direction: column;
+    }
+     .span {
+        /*общие параметры*/
+        position: relative;
+        padding: 0px;
+        max-width: 1340px;
+        z-index: 2;
+        font-size: 100px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 100%;
+        letter-spacing: 30px;
+        text-transform: uppercase;
+    } 
+    .span__ono {
       text-align: left;
-      padding: 0px;
-      margin: 165px auto 20px 50px;
-      max-width: 1340px;
-      z-index: 2;
-      font-size: 100px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: 100%;
-      letter-spacing: 30px;
-      text-transform: uppercase;
+      margin: 0px;
     }
-    .title-second {
-      position: relative;
+    .span__tebe {
       text-align: center;
-      padding: 0px;
-      margin: 0px 110px 0px 50px;
-      z-index: 2;
-      font-size: 100px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: 100% ;
-      letter-spacing: 30px;
-      text-transform: uppercase;
+      margin: 20px 0px;
     }
-    .title-third {
-      position: relative;
+    .span__nado {
       text-align: right;
-      margin: 20px 50px 0px;
-      padding: 0px;
-      z-index: 2;
-      font-size: 100px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: 100% ;
-      letter-spacing: 30px;
-      text-transform: uppercase;
+      margin: 0px;
     }
     .text {
       /*флекс общий*/
@@ -185,7 +178,7 @@
     position: relative;
     margin: 180px 50px 0px 50px;
   }
-  .title {
+  .lots__title {
     /*чтоб не было скролла правый отступ auto*/
     margin: 0px auto 0px 40px;
     font-size: 40px;
@@ -216,13 +209,13 @@
     background-position: center;
     color: white;
   }
-  .card-one {
+  .card__boy {
     background-image: url('../images/card-lot-01.jpg');
   }
-  .card-two {
+  .card__book {
     background-image: url('../images/card-lot-02.jpg');
   }
-  .card-three {
+  .card__art {
     background-image: url('../images/card-lot-03.jpg');
   }
   .overlay {
@@ -337,6 +330,7 @@
   }
   .footer-information {
     list-style: none;
+    /*list-style-type: none;*/
     max-width: 149px;
     /*нет боковых маржинов - нет скролла*/
     margin: 0px auto;
@@ -349,7 +343,8 @@
   .footer-info {
     /*подчеркнули ссылки*/
     text-decoration: underline;
-    /*white-space: nowrap;*/
+    /*убрали точки у списка nav*/
+    list-style-type: none;
   }
   .footer-info:first-of-type {
     text-decoration: none;

@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel-="stylesheet" href="./fonts/fonts.css">
+  <link rel="stylesheet" href="./fonts/fonts.css">
   <link rel="stylesheet" href="./styles/global.css">
   <link rel="stylesheet" href="./styles/style.css">
   <title>Оно тебе надо — аукцион вещей, в которые никто не верил</title>
@@ -32,37 +32,45 @@
   <main class="main">
 
     <section class="flowers">
-      <h1 class="title-first">ОНО</h1>
-      <h2 class="title-second">ТЕБЕ</h2>
-      <h2 class="title-third">НАДО</h2>
+      <h1 class="title">
+        <span class="span span__ono">ОНО</span>
+        <span class="span span__tebe">ТЕБЕ</span>
+        <span class="span span__nado">НАДО</span>
+      </h1>
       <!-- flex -->
       <div class="text">
         <p class="subtitle">Аукцион вещей, в которые никто не верил</p>
-        <button class="button">СДЕЛАТЬ СТАВКУ</button>
+        <button class="button" type="button">СДЕЛАТЬ СТАВКУ</button>
       </div>
     </section>
 
     <section class="lots">
-      <h2 class="title">ЛОТЫ</h2>
+      <h2 class="lots__title">ЛОТЫ</h2>
       <div class="cards">
 
-        <div class="card card-one">
+      <a href="#">
+        <div class="card card__boy">
           <h3 class="text-title">Фильм режиссёра, который  бросил киношколу</h3>
           <p class="text-subtitle">Не просто бросил, а ушёл с первой лекции. Какой была бы ваша ставка, если бы вы не знали, что режиссёр — Пол Томас Андерсон?</p>
           <div class="overlay"></div>
         </div>
+      </a>
 
-        <div class="card card-two">
+      <a href="#">
+        <div class="card card__book">
           <h3 class="text-title">Книга, где описан один скучный день из жизни рекламного агента</h3>
           <p class="text-subtitle">Объёмом почти в тысячу страниц. Иногда без знаков препинания и с переходами на древнеанглийский. В ней одновременно рассказывается о 16 июня 1904 года и об истории литературы, начиная с античных времён. И это всё накладывается на эпическую поэму Гомера. Сколько бы вы поставили на «Улисса» Джеймса Джойса?</p>
           <div class="overlay"></div>
         </div>
+      </a>
 
-        <div class="card card-three">
+      <a href="#">
+        <div class="card card__art">
           <h3 class="text-title">Картина, которую повторит даже 5-летний сын маминой подруги</h3>
           <p class="text-subtitle">Ну действительно, там линия, тут кружочек, а здесь и вовсе что-то похожее на инфузорию-туфельку. Никаких полей, лесов, котиков… Сколько бы вы на такое поставили, если бы не знали, что это — одна из революционных работ Кандинского?</p>
           <div class="overlay"></div>
         </div>
+      </a>
 
       </div>
       <a href="#" class="info">посмотреть больше</a>
@@ -101,16 +109,18 @@
         <p class="contacts-place">наб. Принсенграхт 263-265, Амстердам</p>
       </address>
 
-      <ul class="footer-information">
-        <li class="footer-info"><a href="#">главная</a></li>
-        <li class="footer-info"><a href="#">посмотреть лоты</a></li>
-        <li class="footer-info"><a href="#">об аукционе</a></li>
-      </ul>
+      <nav class="footer-information">
+        <ul>
+         <li class="footer-info"><a href="#">главная</a></li>
+         <li class="footer-info"><a href="#">посмотреть лоты</a></li>
+         <li class="footer-info"><a href="#">об аукционе</a></li>
+        </ul>
+      </nav>
 
       <div class="socials">
-        <a><img class="icon" src="images/yt.svg" alt="логотип ютуба"></a>
-        <a><img class="icon" src="images/vk.svg" alt="логотип вк"></a>
-        <a><img class="icon" src="images/pinterest.svg" alt="логотип пинтереста"></a>
+        <a href="#"><img class="icon" src="images/yt.svg" alt="логотип ютуба"></a>
+        <a href="#"><img class="icon" src="images/vk.svg" alt="логотип вк"></a>
+        <a href="#"><img class="icon" src="images/pinterest.svg" alt="логотип пинтереста"></a>
       </div>
 
     </div>
