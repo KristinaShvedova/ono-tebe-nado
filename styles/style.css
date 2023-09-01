@@ -1,8 +1,8 @@
-/*границы 
+/*границы  */
 * {
     outline: 1px solid red;
 }
-    */
+   
 
 .page {
     max-width: 1440px;
@@ -16,7 +16,7 @@
     /*чтоб лого стоял +- по середине и не было скролла*/
     justify-content: space-between;
     color: black;
-    margin: 92px 50px;
+    margin: 92px 49px 92px 51px;
   }
   .menu {
     position: relative;
@@ -50,8 +50,9 @@
       flex-direction: column;
       list-style: none;
       margin: 0px;
-      padding: 5px 0px 7px 0px;
-      max-width: 240px;
+      /*padding: 5px 0px 7px 0px;*/
+      /*правее на 20пх сделать КАК*/
+      padding: 5px 0px 7px 13px;
       font-size: 18px;
       font-style: normal;
       font-weight: 400;
@@ -61,9 +62,14 @@
       /*подчеркнули ссылки*/
       text-decoration: underline;
     }
+    .contacts-place {
+        max-width: 240px;
+    }
     .logo-black {
       width: 148px;
       height: 105px;
+      /*подгоняли в pixel perfect*/
+      margin: 0px 122px 0px 0px;
     }
   .flowers {
     background-image: url('../images/cover.jpg');
@@ -93,8 +99,10 @@
       opacity: 0.6;
       background-color: black;
     }
-    .title { 
-        margin: 165px 50px 0px;
+    .title {
+        /*175 вместо 165 чтоб в pp было ровно
+        margin: 175px 50px 0px;*/
+        padding: 165px 50px 0px;
         /*в несколько строк текст*/
         white-space: break-spaces;
         /*хорошо стоят заголовки*/
@@ -110,21 +118,30 @@
         font-size: 100px;
         font-style: normal;
         font-weight: 700;
-        line-height: 100%;
+        line-height: 100px;
         letter-spacing: 30px;
         text-transform: uppercase;
     } 
     .aligned-text_left {
       text-align: left;
+      max-width: 1340px;
       margin: 0px;
+      line-height: 115px;
     }
     .aligned-text_center {
       text-align: center;
       margin: 20px 0px;
+      /*встал под pp*/
+      padding: 0px 50px 0px 0px;
     }
     .aligned-text_right {
-      text-align: right;
-      margin: 0px;
+      text-align: end;
+      padding: 0px;
+      /*хорошо встал в pp*/
+      margin: 0px 0px 0px auto;
+      max-width: 400px;
+      letter-spacing: 50px;
+      
     }
     .text {
       /*флекс общий*/
@@ -136,8 +153,12 @@
       box-sizing: border-box;
       text-align: center;
       /*left отступ auto чтоб скролла не было*/
-      margin: 147px 78px 62px auto;
-      max-width: 633px;
+      margin: 148px 0px 62px auto;
+      /*чтоб текст встал хорошо*/
+      max-width: 660px;
+      letter-spacing: .2rem;
+      text-align: left;
+
       font-size: 22px;
       font-style: normal;
       font-weight: 400;
@@ -150,7 +171,7 @@
       /*если убрать будет arial почему-то*/
       font-family: "Raleway", sans-serif;
       cursor: pointer;
-      margin: 135px 50px 50px 78px;
+      margin: 135px 42px 50px 78px;
       padding: 12px 32px 12px 32px;
       border: 1px solid white;
       /*прозрачный фон*/
@@ -242,7 +263,8 @@
     z-index: 1;
   }
   .info {
-    margin: 0px;
+    /*в pp стоит хорошо*/
+    margin: 0px 0px 0px 35px;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
@@ -291,6 +313,11 @@
   .about-title {
     /*чтоб не было скролла right отступ убрали*/
     margin: 100px auto 100px 0px;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
   }
   .about-text {
     margin: auto;
