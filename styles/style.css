@@ -171,11 +171,14 @@
     }
     
     .no-letter-spacing_right {
-        letter-spacing: 30px;
+        letter-spacing: 3px;
     }
     .letter-spacing-extended_right {
     }
     
+    .no-letter-spacing_last-right {
+        letter-spacing: 0px;
+    }
 
     /* 
     .aligned-text {
