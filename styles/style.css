@@ -1,7 +1,7 @@
-/*границы  */
+/*границы 
 * {
     outline: 1px solid red;
-}
+} */
    
 
 .page {
@@ -100,29 +100,6 @@
       background-color: black;
       min-height: 757px;
     }
-    /* .flowers__title {
-        /*175 вместо 165 чтоб в pp было ровно
-        margin: 175px 50px 0px;
-        padding: 165px 50px 0px;
-        /*в несколько строк текст
-        white-space: break-spaces;
-        /*хорошо стоят заголовки
-        display: flex;
-        flex-direction: column;
-    } */
-    /* .aligned-text {
-        /*общие параметры для фразы
-        position: relative;
-        padding: 0px;
-        max-width: 1340px;
-        z-index: 2;
-        font-size: 100px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 100px;
-        letter-spacing: 30px;
-        text-transform: uppercase;
-    } */
     .flowers__title {
         display: flex;
         flex-direction: column;
@@ -144,10 +121,6 @@
         align-self: start;
         line-height: 115px;
     }
-    
-    /*.no-letter-spacing {
-        letter-spacing: 30px;
-    } */
     .no-letter-spacing_left {
         letter-spacing: 4px;
     }
@@ -156,105 +129,47 @@
     }
     .letter-spacing-extended {
         letter-spacing: 0px;
-    } 
+    }
 
     .aligned-text_center {
         align-self: center;
         line-height: 100px;
         padding: 0px;
     }
-    
+    /* 3 23 53 end удалить*/
     .no-letter-spacing_center {
         letter-spacing: 3px;
     }
     .letter-spacing_center {
-        letter-spacing: 23px;
+        letter-spacing: 4px;
+    }
+    .letter-spacing_center_end {
+        letter-spacing: 20px;
     }
     .letter-spacing-extended_center {
         letter-spacing: 53px;
     }
-    /* 4 18 0 идеально
-    3 23 50/55 хорошо
-    }*/
-
-    /*.no-letter-spacing_center {
-        letter-spacing: 30px;
-    }
-    .letter-spacing-extended_center {
-    } */
     
     .aligned-text_right {
         align-self: end;
         line-height: 100px;
         padding: 0px;
     }
-    
-    .no-letter-spacing_right {
-        letter-spacing: 3px;
-    }
     .letter-spacing-extended_right {
+        letter-spacing: 17px;
     }
-    
-    .no-letter-spacing_last-right {
+    .letter-spacing_right {
+        letter-spacing: 8px;
+    }
+    .letter-spacing_right_end {
+        /*для д*/
         letter-spacing: 0px;
     }
-
-    /* 
-    .aligned-text {
-    /*оно
-    position: relative;
-    padding: 0px;
-    max-width: 1340px;
-    z-index: 2;
-    font-size: 100px;
-    font-style: normal;
-    font-weight: 700;
-    letter-spacing: 30px;
-    text-transform: uppercase;
-
-        text-align: left;
-        margin: 0px;
-        line-height: 115px;
+    .no-letter-spacing_right {
+        /*0 чтоб прибился к краю*/
+        letter-spacing: 0px;
     }
-    .aligned-text_center {
-    /*тебе
-    position: relative;
-    /* padding: 0px; 
-    max-width: 1340px;
-    z-index: 2;
-    font-size: 100px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 100px;
-    letter-spacing: 30px;
-    text-transform: uppercase;
-
-      text-align: center;
-      margin: 20px 0px;
-      /*встал под pp
-      padding: 0px 50px 0px 0px;
-    }
-    .aligned-text_right {
-    /*надо
-    position: relative;
-    padding: 0px;
-    /*max-width: 1340px;
-    z-index: 2;
-    font-size: 100px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 100px;
-    /*letter-spacing: 30px;
-    text-transform: uppercase;
-
-      text-align: end;
-      /*хорошо встал в pp
-      margin: 0px 0px 0px auto;
-      max-width: 400px;
-      letter-spacing: 50px;
-    }
-
-    */ 
+    
     .text {
       /*флекс общий*/
       display: flex;
@@ -265,12 +180,12 @@
       box-sizing: border-box;
       text-align: center;
       /*left отступ auto чтоб скролла не было*/
-      margin: 138px 0px 62px auto;
+      margin: 145px 0px 62px auto;
       /*чтоб текст встал хорошо*/
       max-width: 660px;
-      letter-spacing: .2rem;
+      /* letter-spacing: .2rem; */
+      letter-spacing: .13em;
       text-align: left;
-
       font-size: 22px;
       font-style: normal;
       font-weight: 400;
@@ -283,7 +198,7 @@
       /*если убрать будет arial почему-то*/
       font-family: "Raleway", sans-serif;
       cursor: pointer;
-      margin: 123px 42px 50px 78px;
+      margin: 133px 44px 50px 76px;
       padding: 12px 32px 12px 32px;
       border: 1px solid white;
       /*прозрачный фон*/
@@ -433,7 +348,7 @@
   }
   .about-text {
     margin: auto;
-    padding: 25px 0px 0px;
+    padding: 22px 0px 0px;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
