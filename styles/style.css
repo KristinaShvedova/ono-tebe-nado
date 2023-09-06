@@ -403,7 +403,6 @@
   }
   .footer-information {
     list-style: none;
-    /*list-style-type: none;*/
     max-width: 149px;
     /*нет боковых маржинов - нет скролла*/
     margin: 0px auto;
