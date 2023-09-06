@@ -1,7 +1,7 @@
-/* границы
+/* границы 
 * {
-    outline: 1px solid red;
-} */
+    outline: 1px solid red;  
+}  */
    
 
 .page {
@@ -50,8 +50,7 @@
       flex-direction: column;
       list-style: none;
       margin: 0px;
-      /*padding: 5px 0px 7px 0px;*/
-      /*правее на 20пх сделать КАК*/
+      /*правее сделать НУЖНО на 20пх*/
       padding: 5px 0px 7px 13px;
       font-size: 18px;
       font-style: normal;
@@ -69,13 +68,10 @@
       width: 148px;
       height: 105px;
       /*подгоняли в pixel perfect*/
-      margin: 0px 122px 0px 0px;
+      margin: 0px 122px 0px auto;
+      padding: 0px 0px 0px 0px;
     }
-    @media screen and (max-width: 1120px) {
-        .logo-black {
-            margin: 0px;
-        }
-      }
+
   .flowers {
     background-image: url('../images/cover.jpg');
     /*чтоб элементы блока с позицией абсолют не вышли за рамки блока*/
@@ -185,11 +181,13 @@
       box-sizing: border-box;
       text-align: center;
       /*left отступ auto чтоб скролла не было*/
-      margin: 145px 0px 62px auto;
+      margin: 147px 0px 62px auto;
       /*чтоб текст встал хорошо*/
       max-width: 660px;
-      /* letter-spacing: .2rem; */
-      letter-spacing: .13em;
+      /*отступы между буквами*/
+      letter-spacing: 0px;
+      /*отступы между словами*/
+      word-spacing: 18px;
       text-align: left;
       font-size: 22px;
       font-style: normal;
@@ -203,7 +201,7 @@
       /*если убрать будет arial почему-то*/
       font-family: "Raleway", sans-serif;
       cursor: pointer;
-      margin: 133px 44px 50px 76px;
+      margin: 133px 50px 50px 76px;
       padding: 12px 32px 12px 32px;
       border: 1px solid white;
       /*прозрачный фон*/
@@ -217,6 +215,7 @@
       line-height: normal;
       text-transform: uppercase;
     }
+
   .lots {
     position: relative;
     margin: 180px 50px 0px 50px;
@@ -237,15 +236,12 @@
     justify-content: space-between;
     padding: 0px;
     margin: 27px auto 30px;
-  }
-  @media screen and (max-width: 1120px) {
-    .cards {
-        margin: 27px 0px 30px;
-    }
+    gap: 25px;
   }
   .card {
     /*без относительной позиции затемнение наслаивается*/
     position: relative;
+    
     max-width: 430px;
     min-height: 450px;
     display: flex;
@@ -276,7 +272,6 @@
     opacity: 0.6;
     background-color: #000;
   }
-  
   .text-title {
     margin: 0;
     padding: 50px 40px 0px;
@@ -289,12 +284,6 @@
     text-transform: uppercase;
     z-index: 1;
   }
-  @media screen and (max-width: 1120px) {
-    .text-title {
-        padding: 18px 0px 18px 0px;
-        font-size: 16px;
-    }
-  }
   .text-subtitle {
     margin: 0px;
     padding: 0px 40px 50px 40px;
@@ -305,24 +294,19 @@
     line-height: 120%;
     z-index: 1;
   }
-  @media screen and (max-width: 1120px) {
-    .text-title {
-        padding: 0px;
-        font-size: 16px;
-    } 
-  }
   .info {
-    /*в pp стоит хорошо*/
-    margin: 0px 0px 0px 35px;
+    /*в pp стоит хорошо 35 слева*/
+    margin: 0px 0px 0px 40px;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     text-decoration: underline;
   }
+  
   .about {
-    /* margin: 182px 50px 180px; */
-    margin: 182px 50px 180px 50px;
+    margin: 182px 50px 180px;
+    padding: 0px;
     position: relative;
   }
   .column {
@@ -347,13 +331,6 @@
     justify-content: center;
     background-color: #000000;
   }
-
-  @media screen and (max-width: 1130px) {
-    .circle {
-        margin: 0px;
-    }
-  }
-  
   .logo {
       max-width: 148px;
       min-height: 114px;
@@ -361,14 +338,16 @@
   }
   .text-column {
     position: relative;
+    display: flex;
+    flex-direction: column;
     /*чтоб не было скролла*/
     margin: 0px 0px 0px 25px;
     max-width: 885px;
-    min-width: 400px;
+    min-width: 300px;
   }
   .about-title {
-    /*чтоб не было скролла right отступ убрали*/
-    margin: 100px auto 100px 0px;
+    /*чтоб не было скролла 100px 0px 100px auto*/
+    margin: 100px 0px;
     font-size: 40px;
     font-style: normal;
     font-weight: 700;
@@ -376,7 +355,7 @@
     text-transform: uppercase;
   }
   .about-text {
-    margin: auto;
+    margin: 0px;
     padding: 22px 0px 0px;
     font-size: 20px;
     font-style: normal;
@@ -386,6 +365,7 @@
   .about-text:first-of-type {
     padding-top: 0px;
   }
+
   .footer {
     /*вывалился на 1000px*/
     position: relative;
@@ -411,11 +391,6 @@
     font-weight: 400;
     line-height: normal;
     text-align: center;
-  }
-  @media screen and (max-width: 1120px) {
-    .footer-information {
-        margin: 0px 100px;
-    }
   }
   .footer-info {
     /*подчеркнули ссылки*/
