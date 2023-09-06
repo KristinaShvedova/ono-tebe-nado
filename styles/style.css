@@ -1,4 +1,4 @@
-/*границы 
+/* границы
 * {
     outline: 1px solid red;
 } */
@@ -71,6 +71,11 @@
       /*подгоняли в pixel perfect*/
       margin: 0px 122px 0px 0px;
     }
+    @media screen and (max-width: 1120px) {
+        .logo-black {
+            margin: 0px;
+        }
+      }
   .flowers {
     background-image: url('../images/cover.jpg');
     /*чтоб элементы блока с позицией абсолют не вышли за рамки блока*/
@@ -233,6 +238,11 @@
     padding: 0px;
     margin: 27px auto 30px;
   }
+  @media screen and (max-width: 1120px) {
+    .cards {
+        margin: 27px 0px 30px;
+    }
+  }
   .card {
     /*без относительной позиции затемнение наслаивается*/
     position: relative;
@@ -279,6 +289,12 @@
     text-transform: uppercase;
     z-index: 1;
   }
+  @media screen and (max-width: 1120px) {
+    .text-title {
+        padding: 18px 0px 18px 0px;
+        font-size: 16px;
+    }
+  }
   .text-subtitle {
     margin: 0px;
     padding: 0px 40px 50px 40px;
@@ -288,6 +304,12 @@
     font-weight: 400;
     line-height: 120%;
     z-index: 1;
+  }
+  @media screen and (max-width: 1120px) {
+    .text-title {
+        padding: 0px;
+        font-size: 16px;
+    } 
   }
   .info {
     /*в pp стоит хорошо*/
@@ -299,7 +321,8 @@
     text-decoration: underline;
   }
   .about {
-    margin: 182px 50px 180px;
+    /* margin: 182px 50px 180px; */
+    margin: 182px 50px 180px 50px;
     position: relative;
   }
   .column {
@@ -323,6 +346,12 @@
     align-items: center;
     justify-content: center;
     background-color: #000000;
+  }
+
+  @media screen and (max-width: 1130px) {
+    .circle {
+        margin: 0px;
+    }
   }
   
   .logo {
@@ -383,6 +412,11 @@
     font-weight: 400;
     line-height: normal;
     text-align: center;
+  }
+  @media screen and (max-width: 1120px) {
+    .footer-information {
+        margin: 0px 100px;
+    }
   }
   .footer-info {
     /*подчеркнули ссылки*/
